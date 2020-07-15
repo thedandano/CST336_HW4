@@ -1,0 +1,115 @@
+body {
+  /* background-color:#556271; */
+  background-color: #4b5764;
+  color: #dce1e9;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+header,
+nav,
+footer {
+  text-align: center;
+}
+
+h1 {
+  font-family: "DM Mono", monospace;
+}
+hr {
+  color: #dce1e9;
+}
+
+nav a {
+  padding: 5px;
+  margin: 5px;
+  /* padding-bottom: 4px; */
+  font-size: 1.8em;
+  text-decoration: none;
+  color: #dce1e9;
+}
+nav a:hover {
+  border-bottom: 2px #ff6a67 solid;
+  font-size: 2em;
+  transition: 0.5s;
+}
+
+a.active {
+  color: #ff6a67;
+}
+
+nav a,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-variant: unset;
+}
+main {
+  width: 95%;
+  margin: 0 auto;
+}
+.responsive {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.external-links {
+  color: #67fb74; /*complimentary color of FF6A67*/
+  text-decoration: none;
+}
+.fig-col,
+.div-col {
+  flex: 1;
+  text-align: center;
+}
+
+#img-traffic {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+p,
+li {
+  font-family: Helvetica;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+kbd {
+  color: yellow;
+}
+footer {
+  font-size: small;
+  font-family: Helvetica;
+}
+
+/* a.visited {
+    color: #67fb74; 
+/* Classes Below */
+
+#logo-size {
+  width: 25%;
+  height: auto;
+}
+/* For larger displays */
+@media (min-width: 480px) {
+  .top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: flow;
+    margin: 0 auto;
+  }
+}
+/* For smaller displays */
+@media (max-width: 480px) {
+  nav a {
+    display: flex;
+    flex-direction: column;
+  }
+  h2,
+  h3 {
+    text-align: center;
+  }
+}

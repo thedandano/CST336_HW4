@@ -1,0 +1,33 @@
+
+<%- include("partials/header.ejs") %> 
+<!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+    <body>
+        
+        <header>
+            <h1> Bufferbloat </h1>
+        </header>
+        <hr />
+        <%- include("partials/nav.ejs") %> 
+        
+        <br /><br />
+        <!--Main-->
+        <main class="top-content">
+            <!--Holds the image-->
+            <figure class="fig-col">
+                <img class="responsive" src=img/bufferbloat.png alt="Image showing bufferbloat">
+            </figure>
+            <!--div holds text-->
+            <div class="div-col">
+                <h2>Why Bufferbloat?</h2>
+                <p>Bufferbloat, as mentioned in the overview, is caused when too much traffic is coming into a network device faster than can be processed. For example, when many devices (such as smart devices) are on your home network and they are all sending information to your router for processing, and then you decide it is time to play a nice game (or 5) of Pubg with your squad. As you are playing, you start to notice lag (and so will your household when you yell, “I shot first!”). This is because your packets that are being sent over UDP are waiting (or dropped if the buffer is full) to be processed by the router. Whether the waiting is on the inbound port our outbound port of the router the effect is the same. Your packets did get out to Pubg’s servers fast enough and the person you just traded shots (when two players exchange fire and both are hit at a the same time) with got the kill even though you pressed the trigger first. As a side note, bufferbloat can occur on both the upstream and the downsteam. In some applications bufferbloat is not very noticeable like browsing the web, but if you are an online gamer or use VOIP (i.e., Zoom or Wi-Fi calling) a lot, you will notice it.</p>
+            </div>
+            
+        </main>
+            
+        <%- include("partials/footer.ejs") %> 
+        
+    </body>
+    <!-- closing body -->
+
+</html>

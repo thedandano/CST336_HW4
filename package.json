@@ -1,0 +1,28 @@
+{
+  "name": "cst336_hw4",
+  "version": "1.0.0",
+  "description": "HW4 using node to redo HW1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedandano/CST336_HW4.git"
+  },
+  "keywords": [
+    "CST336",
+    "HW4"
+  ],
+  "author": "Dan Sedano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thedandano/CST336_HW4/issues"
+  },
+  "homepage": "https://github.com/thedandano/CST336_HW4#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}

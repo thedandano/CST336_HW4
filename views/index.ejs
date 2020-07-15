@@ -1,0 +1,49 @@
+
+<%- include("partials/header.ejs") %> 
+
+  <body>
+    <header>
+      <h1>Bufferbloat</h1>
+    </header>
+    <hr />
+    <%- include("partials/nav.ejs") %>
+
+    <br /><br />
+    <!--Main-->
+    <main class="top-content">
+      <!--Holds the image-->
+      <figure class="fig-col">
+        <img class="responsive" src="img/traffic.jpg" alt="Picture of Dan" />
+      </figure>
+      <!-- Holds the text -->
+      <div class="div-col">
+        <!--Need words here-->
+        <h2>What is Bufferbloat?</h2>
+        <p>
+          Have you ever been in the middle of playing a video game and wondered
+          why you are experiencing so much lag? If so, the likely culprit for
+          this is bufferbloat. Bufferbloat comes from the router or other
+          attached network equipment that process incoming packets fast enough.
+          Think of a traffic jam (like in the adjacent image). When many people
+          rush to get somewhere at the same time (rush hour). The freeway (as we
+          say on the west coast) becomes overloaded with many vehicles. You will
+          notice most of this congestion at junctions and on/off ramps. This is
+          like what happens in your home network. <br /><br />
+        </p>
+        <h3>Source:</h3>
+        <p>
+          For a deep dive visit
+          <a
+            class="external-links visited"
+            target="_blank"
+            href="https://www.bufferbloat.net"
+            >bufferbloat.net</a
+          >.
+        </p>
+      </div>
+    </main>
+
+   <%- include("partials/footer.ejs") %> 
+  </body>
+  <!-- closing body -->
+</html>

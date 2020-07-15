@@ -1,0 +1,101 @@
+<%- include("partials/header.ejs") %> 
+<body>
+
+    <header>
+        <h1> Bufferbloat </h1>
+    </header>
+    <hr />
+    <%- include("partials/nav.ejs") %> 
+    <br /><br />
+    <!--Main-->
+    <main>
+        <!--Intro text-->
+        <div class="top-content">
+            <!--Image-->
+        <figure class="fig-col">
+            <img class="responsive" src=img/speed-test.jpg alt="placeholder image">
+        </figure>
+
+        <div class="div-col"> 
+            <h2>How to Test</h2>
+            <p>There are a several different methods to test for bufferbloat. </p>
+            <p>
+                <strong>Note:</strong> for these tests it is highly recommended you are hardwired into your router.
+                Wi-Fi introduces another layer of lag that may make the results inaccurate, which
+                is outside of the scope of this site. Also, who games on Wi-Fi?
+            </p>
+            <br>
+        </div>
+        
+        </div>
+        <!--Second div: Content-->
+        <div>
+            <h3>Testing using the Terminal</h3>
+            <ol>
+                <li>
+                    Open the terminal or command prompt.
+                    <ul>
+                        <li>On Mac run the command <kbd>ping</kbd> followed by a website</li>
+                        <li>One Windows run the same command <kbd>ping -t</kbd> followed by a website name. The “-t”
+                            option allows ping to run until you stop. This is not needed on Mac as this is the default
+                            option. </li>
+                    </ul>
+                </li>
+                <li>Open your browser and navigate to your favorite speedtest website. If you do not know any see the
+                    links below to some of my favorites.</li>
+                <li>Make sure your terminal/command prompt is visible and run the speedtest.</li>
+                <li>If you notice your ping start to spike significantly during your speedtest (e.g., at idle you were
+                    sitting at 25 ms and during the test you were at 80 ms) then you are experiencing bufferbloat.</li>
+                <li>If you experienced bufferbloat then proceed to the solution page, and if you did not experience
+                    bufferbloat, do it anyway.</li>
+            </ol>
+
+            <h3>Speedtest Sites</h3>
+            <ul>
+                <li><a class="external-links visited" target="_blank" href="https://fast.com">Fast.com</a></li>
+                <li><a class="external-links visited" target="_blank" href="https://speedtest.net">Speedtest.net</a></li>
+                <li><a class="external-links visited" target="_blank" href="https://speedof.me">Speedof.me</a></li>
+            </ul>
+
+            <h3> Easier Methods </h3>
+            <p>
+                One of the easier methods would be to visit the fine folks at <a class="external-links" target="_blank" href="https://www.dslreports.com/speedtest?httpsok=1">dslreports.com/speedtest</a> to run the
+                bufferbloat test. The best scores for bufferbloat are an A or A+. A B is acceptable, however anything
+                less should prompt you to want to fix it.
+            
+            <br>
+                Note: sometimes this test does not work well, usually because the test has met its data usage for the
+                month. Also, if you are having issues with the test, try running it using http instead of https.
+            <br>
+        
+                If the above does not sound like fun, another <em>easier</em> method (but not as easy as dsl reports)
+                would be to use Netflix’s fast.com
+            </p>
+
+            <h3>Steps:</h3>
+                <ol>
+                    <li>Go to Fast.com</li>
+                    <li>Let the first test run</li>
+                    <li>After the test is done, click on “Show more info” </li>
+                    <li>Click on “Settings”</li>
+                    <li>Click on all three checkboxes (If your bufferbloat is down steam related 
+                        then you can leave the top checkbox unchecked) </li>
+                    <li>Click “Save” and let the test run again </li>
+                </ol>
+                <p>
+                This time pay attention to your Unloaded and Loaded latencies. If you checked the 
+                top box in the settings, you would see loaded latency in grey. That means it is 
+                still showing you the download latency, but it will not show you the final score, 
+                so, keep watching it if you are curious. Otherwise let the test run. 
+                Ideally your loaded latency and unloaded latency should be equal or close to equal. 
+                If loaded is significant then you have bufferbloat and proceed to the next page.
+                </p>
+        </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %> 
+ 
+</body>
+<!-- closing body -->
+
+</html>

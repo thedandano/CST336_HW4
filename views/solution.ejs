@@ -1,0 +1,77 @@
+    <%- include("partials/header.ejs")  %> 
+
+    <!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+    <body>
+        
+        <header>
+            <h1> Bufferbloat </h1>
+        </header>
+        <hr />
+        <%- include("partials/nav.ejs") %> 
+        
+        <br /><br />
+        <!--Main-->
+        <main>
+            <div class="top-content">
+                <!--Holds the image-->
+                <figure class="fig-col">
+                    <img class="responsive" src=img/no-traffic.jpg alt="placeholder image">
+                </figure>
+                <div class="div-col">
+                    <h2>Minimizing Bufferbloat</h2>
+                    <p>You must have just read the title and thought, “I don’t want to minimize bufferboat; 
+                        I want to eliminate it!” Well, unfortunately, that’s not possible, but by 
+                        minimizing it you’ll notice a significant difference, and perhaps the next 
+                        time you trade shots with someone, that someone will experience bufferbloat 
+                        (because they didn’t’ read this website) and you’ll be on the winning end of the 
+                        exchange!</p>
+
+                </div>
+           
+            </div>
+            <div>
+                <h2>Solutions:</h2>
+                <p>Some of the solutions below will depend on how much money you are willing to 
+                    throw at the issue and how technical you are. The items below are ordered from 
+                    least expensive to most expensive.</p>
+                    <ol>
+                    <li>Check if your existing router already has some sort of QoS adjustments, 
+                        but not only regular QoS, you will need something that allows for some sort 
+                        of Smart Queue Management (SQM). If you have it then great! Look up some 
+                        videos and have fun messing with your settings!</li>
+                    <li>If your existing router does not have a QoS and you are feeling adventurous 
+                        see if the OpenWRT custom firmware is compatible with your unit and install 
+                        it. OpenWRT will have the options needed to get bufferbloat under control.</li>
+                    <li>If none of the above work for you, then let us throw money at the problem. 
+                        You can buy a router that already comes with some sort of SQM. See the list 
+                        below:
+                        <ul>
+                            <li>IQ Router: this is probably the easiest to set up and is more of an 
+                                all-in-one solution. It has the build in router, switch, and Access 
+                                Point. It will probably set you back about $140 USD</li>
+                            <li>This next solution is more expensive, and a bit trickier to set up. 
+                                Check out the Edgerouter X by Ubiquiti its about $60 USD or the
+                                 Ubiquiti USG for around $130 USD. However, you will need a 
+                                 separate Access Point (AP) to get Wi-Fi. Fortunately, Ubiquiti 
+                                 has you covered there (not sponsored). Depending on your need the 
+                                 AP can set you back $100 - $160 (AC LR and NanoHD respectively). 
+                                 You will also need to install controller software if you want to 
+                                 keep tabs on what is running in your network.</li>
+                        </ul>
+                    </li>
+                    </ol> 
+                    <p>
+                        <strong>Note:</strong> The USG is not as fast as the Edgerouter, but you can control the USG 
+                        with the same software as an Ubiquiti AP. Otherwise, you’ll need to log in 
+                        to two different pages to manage the Edgerouter and AP. If you are OK with 
+                        that, great!
+                    </p>                   
+            </div>
+        </main>
+        <%- include("partials/footer.ejs") %> 
+        
+    </body>
+    <!-- closing body -->
+
+</html>
