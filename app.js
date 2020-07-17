@@ -15,7 +15,7 @@ var faker = require("faker");
 const PORT = process.env.PORT;
 const IP = process.env.IP;
 
-//middleware
+//middleware functions
 app.use((req, res, next) => {
   console.log(`${req.url} requested.`);
   next();
@@ -25,12 +25,18 @@ app.use((req, res, next) => {
  * calls long lat from faker and assigns to global variables
  */
 app.use((req, res, next) => {
+  
+  // stores faker call for easy use in console.log
   const long = parseFloat(faker.address.longitude()).toFixed(2);
   const lat = parseFloat(faker.address.latitude()).toFixed(2);
   const IP = faker.internet.ip();
+
+  //global response variables
   res.locals.long = long;
   res.locals.lat = lat;
   res.locals.IP = IP;
+
+  // output to console.log
   console.log(`Long: ${long} Lat: ${lat} IP: ${IP}`);
   next();
 });
