@@ -8,30 +8,43 @@ app.engine("html", require("ejs").renderFile);
 app.use(express.static("public"));
 //local dev variables
 require("dotenv").config();
+//faker
+var faker = require("faker");
 
 //global variables
 const PORT = process.env.PORT;
 const IP = process.env.IP;
+
+//middleware
+app.use((req, res, next) => {
+  console.log(`${req.url} requested.`);
+  next();
+});
+
+/**
+ * calls long lat from faker and assigns to global variables
+ */
+app.use((req, res, next) => {
+  const long = parseFloat(faker.address.longitude()).toFixed(2);
+  const lat = parseFloat(faker.address.latitude()).toFixed(2);
+  res.locals.long = long;
+  res.locals.lat = lat;
+  console.log(`Long: ${long} Lat: ${lat}`);
+  next();
+});
+
 //routes
 app.get("/", function (req, res) {
-  //   res.send("good");
   res.render("index.ejs", { page_name: "overview" });
-  console.log("index");
 });
 app.get("/causes", function (req, res) {
-  //   res.send("good");
   res.render("causes.ejs", { page_name: "causes" });
-  console.log("causes");
 });
 app.get("/testing", function (req, res) {
-  //   res.send("good");
   res.render("testing.ejs", { page_name: "testing" });
-  console.log("testing");
 });
 app.get("/solution", function (req, res) {
-  //   res.send("good");
   res.render("solution.ejs", { page_name: "solution" });
-  console.log("solution");
 });
 
 // starts server
