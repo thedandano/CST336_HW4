@@ -27,9 +27,11 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   const long = parseFloat(faker.address.longitude()).toFixed(2);
   const lat = parseFloat(faker.address.latitude()).toFixed(2);
+  const IP = faker.internet.ip();
   res.locals.long = long;
   res.locals.lat = lat;
-  console.log(`Long: ${long} Lat: ${lat}`);
+  res.locals.IP = IP;
+  console.log(`Long: ${long} Lat: ${lat} IP: ${IP}`);
   next();
 });
 

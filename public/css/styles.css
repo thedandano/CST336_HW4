@@ -21,7 +21,6 @@ hr {
 nav a {
   padding: 5px;
   margin: 5px;
-  /* padding-bottom: 4px; */
   font-size: 1.8em;
   text-decoration: none;
   color: #dce1e9;
@@ -82,11 +81,8 @@ kbd {
 footer {
   font-size: small;
   font-family: Helvetica;
+  line-height: 1.3;
 }
-
-/* a.visited {
-    color: #67fb74; 
-/* Classes Below */
 
 #logo-size {
   width: 25%;
