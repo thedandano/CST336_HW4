@@ -98,7 +98,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: flow;
     margin: 0 auto;
   }
 }
